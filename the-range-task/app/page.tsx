@@ -12,8 +12,8 @@ export default async function Home() {
 
   return (
     <div className="grid items-center justify-center bg-white font-sans">
-      <main className="items-center justify-center w-4xl h-full py-32 h-full px-16 sm:items-start">
-        <div className="w-full justify-center text-lg decoration-2 p-2">Office Essentials</div>
+      <main className="items-center justify-center w-full h-full md:py-16 h-full md:px-16 sm:px-4 sm:items-start">
+        <div className="w-full md:justify-center text-lg decoration-2 sm:p-1 md:p-2">Office Essentials</div>
         <Suspense fallback={<div className="grid place-items-center justify-center"><Spinner/></div>}>
           <ProductBody products={new Promise((resolve) => resolve(productData()))} />
         </Suspense>

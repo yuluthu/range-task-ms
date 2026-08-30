@@ -15,7 +15,7 @@ export default function Products({sortBy, products}: {sortBy: any, products: any
   }
   console.log(products)
   return (
-      <div className="grid grid-cols-4 py-3 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-3 gap-4">
         {products && products.sort(compare).filter((product) => !sortBy || product[sortBy]).map((product) => (
           <Product key={product.id} productInfo={product} />
         ))}
